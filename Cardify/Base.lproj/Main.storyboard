@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y9j-Ng-HXO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cardify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector logo - No Background" translatesAutoresizingMaskIntoConstraints="NO" id="W40-mk-4mw">
+                                <rect key="frame" x="54" y="131" width="483" height="286"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Improve your grades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHl-95-YnB">
+                                <rect key="frame" x="20" y="535" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xpR-eX-zws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-If-ElV">
+                                <rect key="frame" x="185" y="722" width="136" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <color key="baseBackgroundColor" red="0.36470588235294116" green="0.062745098039215685" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qoi-Mv-iZU" kind="show" id="Rxm-3W-8aa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJo-yq-k8Q">
+                                <rect key="frame" x="174" y="793" width="69" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Signup"/>
+                                <connections>
+                                    <segue destination="L6T-HV-8ch" kind="show" id="GD2-DT-iAx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Create your own flashcards and look up word definitions in the dictionary." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grt-Q3-rQc">
+                                <rect key="frame" x="36" y="604" width="343" height="98"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="grt-Q3-rQc" firstAttribute="top" secondItem="cHl-95-YnB" secondAttribute="bottom" constant="24" id="5EI-o7-VIK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="grt-Q3-rQc" secondAttribute="bottom" constant="160" id="AvQ-66-aMe"/>
+                            <constraint firstItem="grt-Q3-rQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="BB6-B3-zsU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="grt-Q3-rQc" secondAttribute="trailing" id="EmP-Hy-UvO"/>
+                            <constraint firstItem="cHl-95-YnB" firstAttribute="top" secondItem="W40-mk-4mw" secondAttribute="bottom" constant="118" id="JqD-uJ-4Zl"/>
+                            <constraint firstAttribute="bottom" secondItem="cHl-95-YnB" secondAttribute="bottom" constant="316" id="PhW-PQ-ftf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cHl-95-YnB" secondAttribute="trailing" constant="20" id="cy4-o2-sbX"/>
+                            <constraint firstItem="W40-mk-4mw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="dfT-Cl-Muo"/>
+                            <constraint firstItem="W40-mk-4mw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="kkD-v6-NFH"/>
+                            <constraint firstItem="cHl-95-YnB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oF0-2h-hel"/>
+                            <constraint firstItem="W40-mk-4mw" firstAttribute="centerX" secondItem="grt-Q3-rQc" secondAttribute="centerX" constant="70.5" id="pcW-az-Lh4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="idQ-Vk-5zF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="39.508928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yAf-6N-83z">
+            <objects>
+                <viewController id="L6T-HV-8ch" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="toq-F9-xLI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PD7-9W-dDt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4vO-a1-iAV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lka-lu-PDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="416.51785714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BJc-VY-9B6">
+            <objects>
+                <viewController id="Qoi-Mv-iZU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dNj-vK-M8u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yYJ-lc-aXm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4kE-yv-Uen"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHL-tO-YzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="-319.41964285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OR8-HS-fwx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y9j-Ng-HXO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZw-3n-jM5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ubv-Vh-KhF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLT-p3-bTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="39.508928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Vector logo - No Background" width="1000" height="1125"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
