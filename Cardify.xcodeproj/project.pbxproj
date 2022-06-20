@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102C3E25286036C40049215B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C3E24286036C40049215B /* HomeViewController.swift */; };
+		102C3E27286036CF0049215B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C3E26286036CF0049215B /* DictionaryViewController.swift */; };
+		102C3E29286036D70049215B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C3E28286036D70049215B /* ProfileViewController.swift */; };
+		102FE30C285EF1940019244E /* ComponentKit in Frameworks */ = {isa = PBXBuildFile; productRef = 102FE30B285EF1940019244E /* ComponentKit */; };
+		102FE315285EF53C0019244E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102FE314285EF53C0019244E /* Utils.swift */; };
+		10BBC36B285FD2D000B74E6B /* StudySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36A285FD2D000B74E6B /* StudySet.swift */; };
+		10BBC36D285FD46300B74E6B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36C285FD46300B74E6B /* DataProvider.swift */; };
+		10BBC370285FE2EE00B74E6B /* StudySetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */; };
+		10E07C7F2856CA9200DACDF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E07C7E2856CA9200DACDF5 /* LoginViewController.swift */; };
+		10E07C812856CB1B00DACDF5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E07C802856CB1B00DACDF5 /* SignupViewController.swift */; };
 		10E3BB642853E5250077C228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3BB632853E5250077C228 /* AppDelegate.swift */; };
 		10E3BB662853E5250077C228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3BB652853E5250077C228 /* SceneDelegate.swift */; };
-		10E3BB682853E5250077C228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3BB672853E5250077C228 /* ViewController.swift */; };
+		10E3BB682853E5250077C228 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3BB672853E5250077C228 /* WelcomeViewController.swift */; };
 		10E3BB6B2853E5250077C228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E3BB692853E5250077C228 /* Main.storyboard */; };
 		10E3BB6D2853E5270077C228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E3BB6C2853E5270077C228 /* Assets.xcassets */; };
 		10E3BB702853E5270077C228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E3BB6E2853E5270077C228 /* LaunchScreen.storyboard */; };
@@ -19,10 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102C3E24286036C40049215B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		102C3E26286036CF0049215B /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		102C3E28286036D70049215B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		102FE314285EF53C0019244E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		10BBC36A285FD2D000B74E6B /* StudySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySet.swift; sourceTree = "<group>"; };
+		10BBC36C285FD46300B74E6B /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetCell.swift; sourceTree = "<group>"; };
+		10E07C7E2856CA9200DACDF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		10E07C802856CB1B00DACDF5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		10E3BB602853E5250077C228 /* Cardify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E3BB632853E5250077C228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10E3BB652853E5250077C228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		10E3BB672853E5250077C228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10E3BB672853E5250077C228 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		10E3BB6A2853E5250077C228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10E3BB6C2853E5270077C228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10E3BB6F2853E5270077C228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,12 +56,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102FE30C285EF1940019244E /* ComponentKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102FE313285EF5320019244E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				102FE314285EF53C0019244E /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		10BBC369285FD2B500B74E6B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				10BBC36A285FD2D000B74E6B /* StudySet.swift */,
+				10BBC36C285FD46300B74E6B /* DataProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		10BBC36E285FE2CC00B74E6B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		10E3BB572853E5250077C228 = {
 			isa = PBXGroup;
 			children = (
@@ -62,14 +107,22 @@
 		10E3BB622853E5250077C228 /* Cardify */ = {
 			isa = PBXGroup;
 			children = (
+				10BBC36E285FE2CC00B74E6B /* Cell */,
+				10BBC369285FD2B500B74E6B /* Data */,
+				102FE313285EF5320019244E /* Utils */,
 				10E3BB632853E5250077C228 /* AppDelegate.swift */,
-				10E3BB652853E5250077C228 /* SceneDelegate.swift */,
-				10E3BB672853E5250077C228 /* ViewController.swift */,
-				10E3BB692853E5250077C228 /* Main.storyboard */,
-				10E3BB6E2853E5270077C228 /* LaunchScreen.storyboard */,
 				10E3BB6C2853E5270077C228 /* Assets.xcassets */,
-				10E3BB712853E5270077C228 /* Info.plist */,
 				10E3BB99285402030077C228 /* Fonts */,
+				10E3BB712853E5270077C228 /* Info.plist */,
+				10E3BB6E2853E5270077C228 /* LaunchScreen.storyboard */,
+				10E3BB692853E5250077C228 /* Main.storyboard */,
+				10E07C7E2856CA9200DACDF5 /* LoginViewController.swift */,
+				10E3BB652853E5250077C228 /* SceneDelegate.swift */,
+				10E07C802856CB1B00DACDF5 /* SignupViewController.swift */,
+				10E3BB672853E5250077C228 /* WelcomeViewController.swift */,
+				102C3E24286036C40049215B /* HomeViewController.swift */,
+				102C3E26286036CF0049215B /* DictionaryViewController.swift */,
+				102C3E28286036D70049215B /* ProfileViewController.swift */,
 			);
 			path = Cardify;
 			sourceTree = "<group>";
@@ -100,6 +153,9 @@
 			dependencies = (
 			);
 			name = Cardify;
+			packageProductDependencies = (
+				102FE30B285EF1940019244E /* ComponentKit */,
+			);
 			productName = Cardify;
 			productReference = 10E3BB602853E5250077C228 /* Cardify.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +184,9 @@
 				Base,
 			);
 			mainGroup = 10E3BB572853E5250077C228;
+			packageReferences = (
+				102FE30A285EF1940019244E /* XCRemoteSwiftPackageReference "ComponentKit" */,
+			);
 			productRefGroup = 10E3BB612853E5250077C228 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,7 +217,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E3BB682853E5250077C228 /* ViewController.swift in Sources */,
+				10BBC370285FE2EE00B74E6B /* StudySetCell.swift in Sources */,
+				10E07C7F2856CA9200DACDF5 /* LoginViewController.swift in Sources */,
+				10E3BB682853E5250077C228 /* WelcomeViewController.swift in Sources */,
+				102C3E27286036CF0049215B /* DictionaryViewController.swift in Sources */,
+				10BBC36B285FD2D000B74E6B /* StudySet.swift in Sources */,
+				10BBC36D285FD46300B74E6B /* DataProvider.swift in Sources */,
+				102C3E29286036D70049215B /* ProfileViewController.swift in Sources */,
+				102C3E25286036C40049215B /* HomeViewController.swift in Sources */,
+				10E07C812856CB1B00DACDF5 /* SignupViewController.swift in Sources */,
+				102FE315285EF53C0019244E /* Utils.swift in Sources */,
 				10E3BB642853E5250077C228 /* AppDelegate.swift in Sources */,
 				10E3BB662853E5250077C228 /* SceneDelegate.swift in Sources */,
 			);
@@ -378,6 +446,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		102FE30A285EF1940019244E /* XCRemoteSwiftPackageReference "ComponentKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lliang826/ComponentKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		102FE30B285EF1940019244E /* ComponentKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 102FE30A285EF1940019244E /* XCRemoteSwiftPackageReference "ComponentKit" */;
+			productName = ComponentKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10E3BB582853E5250077C228 /* Project object */;
 }
