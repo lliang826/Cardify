@@ -23,8 +23,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.hidesBackButton = true
-
+        UITabBar.appearance().tintColor = UIColor(hexString: "#5D1049")
+        
         view.addSubview(studySetTableView)
         NSLayoutConstraint.activate([
             studySetTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -32,6 +32,8 @@ class HomeViewController: UIViewController {
             studySetTableView.topAnchor.constraint(equalTo: view.topAnchor),
             studySetTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: nil)
     }
 }
 
