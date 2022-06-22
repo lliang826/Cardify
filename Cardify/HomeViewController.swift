@@ -11,29 +11,17 @@ class HomeViewController: UIViewController {
 
     let data = DataProvider.makeData()
 
-    lazy var studySetTableView: UITableView = {
-       let tableView = UITableView()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(StudySetCell.self, forCellReuseIdentifier: "cell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-
+    @IBOutlet weak var tableView: UITableView!
+    var rowTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        tabBarController?.navigationController?.navigationBar.isHidden = true
         UITabBar.appearance().tintColor = UIColor(hexString: "#5D1049")
         
-        view.addSubview(studySetTableView)
-        NSLayoutConstraint.activate([
-            studySetTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            studySetTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            studySetTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            studySetTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-        
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: nil)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
@@ -49,12 +37,27 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StudySetCell
-        let cellData = data[indexPath.section]
+        let cellData = data[indexPath.row]
 
         cell.updateView(title: cellData.title)
 
         return cell
     }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("cell at section \(indexPath.section) and row \(indexPath.row) is selected")
+        rowTitle = data[indexPath.row].title
+        print(rowTitle!)
+        
+        performSegue(withIdentifier: "goToFlashCard", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToFlashCard" {
+            let destinationVC = segue.destination as? FlashCardViewController
+            if let title = rowTitle {
+                destinationVC?.flashCardTitle = title
+            }
+        }
+    }
 }

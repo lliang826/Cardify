@@ -51,7 +51,6 @@ class StudySetCell: UITableViewCell {
             HStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             HStack.topAnchor.constraint(equalTo: contentView.topAnchor),
             HStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-
         ])
     }
     

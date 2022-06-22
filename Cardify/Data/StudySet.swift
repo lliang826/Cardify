@@ -9,5 +9,5 @@ import UIKit
 
 struct StudySet {
     var title: String
-    var content: [(question: String, answer: String)]
+    var content: [(question: String, answer: String)] = []
 }

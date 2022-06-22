@@ -8,6 +8,7 @@
 import UIKit
 
 class DataProvider {
+    
     static func makeData() -> [StudySet] {
         var sets: [StudySet] = []
         
