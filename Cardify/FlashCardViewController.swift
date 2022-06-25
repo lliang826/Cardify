@@ -12,14 +12,25 @@ class FlashCardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let data = DataProvider.makeData()
-    var flashCardTitle = ""
+    var flashCardTitle: String?
+    
+    @IBAction func testFlashCard(_ sender: Any) {
+        print("test button clicked")
+        
+        performSegue(withIdentifier: "goToTest", sender: self)
+    }
+    
+    @IBAction func addPairToSet(_ sender: Any) {
+        print("plus button clicked")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Hello"
+        self.navigationItem.title = flashCardTitle
         
         tableView.delegate = self
         tableView.dataSource = self
+
     }
 }
 
@@ -40,7 +51,9 @@ extension FlashCardViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FlashCardCell
-        let cellData = data[indexPath.row]
+        let cellData = data[indexPath.row].content
+        
+//        print("cell at section \(indexPath.section) and row \(indexPath.row) is selected")
         
         var content: [(String, String)] = []
         for d in data {
@@ -49,10 +62,19 @@ extension FlashCardViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        for pair in content {
-            cell.updateView(question: pair.0, answer: pair.1)
+        for pair in cellData {
+            cell.updateView(question: pair.question, answer: pair.answer)
         }
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToTest" {
+            let destinationVC = segue.destination as? TestViewController
+            if let title = self.flashCardTitle {
+                destinationVC?.flashCardTitle = title
+            }
+        }
     }
 }

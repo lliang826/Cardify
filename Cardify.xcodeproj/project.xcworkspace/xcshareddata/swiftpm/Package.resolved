@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "componentkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lliang826/ComponentKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "785ce6fd1558af4e2f19265b8c4c92c6bee14efc"
+      }
+    }
+  ],
+  "version" : 2
+}

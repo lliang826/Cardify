@@ -13,35 +13,39 @@ class FlashCardCell: UITableViewCell {
     lazy var questionLabel: BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Term"
+        label.textColor = UIColor(hexString: "#5D1049")
         return label
     }()
     
     lazy var questionTextField: BaseUITextField = {
        let tf = BaseUITextField()
+        tf.borderStyle = .line
+        tf.font = UIFont.preferredFont(forTextStyle: .subheadline)
         return tf
     }()
     
     lazy var answerLabel: BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Definition"
+        label.textColor = UIColor(hexString: "#5D1049")
         return label
     }()
     
     lazy var answerTextField: BaseUITextField = {
        let tf = BaseUITextField()
+        tf.borderStyle = .line
+        tf.font = UIFont.preferredFont(forTextStyle: .subheadline)
         return tf
     }()
     
-    lazy var hStack: HStack = {
-        let stack = HStack()
+    lazy var vStack: VStack = {
+        let stack = VStack()
         stack.addArrangedSubview(questionLabel)
         stack.addArrangedSubview(questionTextField)
         stack.addArrangedSubview(answerLabel)
         stack.addArrangedSubview(answerTextField)
         
-        stack.spacing = 20
-        stack.alignment = .center
-        
+        stack.spacing = 10
         stack.isLayoutMarginsRelativeArrangement = true
         stack.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
@@ -59,12 +63,12 @@ class FlashCardCell: UITableViewCell {
     }
     
     func setupView() {
-        contentView.addSubview(hStack)
+        contentView.addSubview(vStack)
         NSLayoutConstraint.activate([
-            hStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            hStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            hStack.topAnchor.constraint(equalTo: contentView.topAnchor),
-            hStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            vStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            vStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            vStack.topAnchor.constraint(equalTo: contentView.topAnchor),
+            vStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
     

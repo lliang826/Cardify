@@ -14,6 +14,16 @@ class DataProvider {
         
         sets.append(
             StudySet(
+//                set: ["Software Design Patterns":
+//                        [
+//                            (question: "What are the 3 types of design patterns", answer: "creational, structural, behavioral"),
+//                            (question: "chain of responsibility", answer: "instead of having multiple if else statements, " +
+//                             "we can have multiple Handler classes (which all implement from an AbstractHandler interface) " +
+//                             "to process the request and pass it on to the next Handler in the chain"),
+//                            (question: "decorator", answer: "structural design pattern that attaches new behaviors to objects" +
+//                             "with special wrapper objects"),
+//                        ]
+//                     ]
                 title: "Software Design Patterns",
                 content: [
                     (question: "What are the 3 types of design patterns", answer: "creational, structural, behavioral"),
@@ -37,7 +47,7 @@ class DataProvider {
                 ]
             )
         )
-        
+
         sets.append(
             StudySet(
                 title: "Test",
