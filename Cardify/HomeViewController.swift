@@ -9,10 +9,33 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let data = DataProvider.makeData()
+//    let data = DataProvider.makeData()
+    var studySet: StudySet?
+    var model: StudySetModel?
 
     @IBOutlet weak var tableView: UITableView!
     var rowTitle: String?
+    
+    @IBAction func addStudySet(_ sender: Any) {
+        let dialogueMessage = UIAlertController(title: "Add New Study Set", message: nil, preferredStyle: .alert)
+        dialogueMessage.addTextField { (textField) in
+            textField.placeholder = "Title"
+        }
+        
+        let create = UIAlertAction(title: "Create", style: .default) { (_) in
+            if let textField = dialogueMessage.textFields?.first, let text = textField.text {
+                print("Title: " + text)
+                
+                
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        dialogueMessage.addAction(cancel)
+        dialogueMessage.addAction(create)
+        self.present(dialogueMessage, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,22 +55,27 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return (model?.studySets.count)!
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StudySetCell
-        let cellData = data[indexPath.row]
+//        let cellData = data[indexPath.row]
+        let cellData = model?.studySets[indexPath.row]
 
-        cell.updateView(title: cellData.title)
+        cell.updateView(title: cellData!.title)
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("cell at section \(indexPath.section) and row \(indexPath.row) is selected")
-        rowTitle = data[indexPath.row].title
+//        rowTitle = data[indexPath.row].title
+//        studySet = data[indexPath.row]
+        rowTitle = model?.studySets[indexPath.row].title
+        studySet = model?.studySets[indexPath.row]
         print(rowTitle!)
+        print(studySet!)
         
         performSegue(withIdentifier: "goToFlashCard", sender: self)
     }
@@ -55,8 +83,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToFlashCard" {
             let destinationVC = segue.destination as? FlashCardViewController
-            if let title = rowTitle {
-                destinationVC?.flashCardTitle = title
+            if let studySet = self.studySet {
+                destinationVC?.studySet = studySet
             }
         }
     }

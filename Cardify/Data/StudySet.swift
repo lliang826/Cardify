@@ -7,8 +7,19 @@
 
 import UIKit
 
+//struct StudySet {
+//    var title: String
+//    var content: [(question: String, answer: String)] = []
+//}
+
 struct StudySet {
-//    var set: [String: [(question: String, answer: String)]]
+    var id: String
     var title: String
-    var content: [(question: String, answer: String)] = []
+    var content: [String] = []
+
+    init(studySetObject: StudySetObject) {
+        self.id = studySetObject.id.stringValue
+        self.title = studySetObject.title
+        self.content = Array(studySetObject.content)
+    }
 }

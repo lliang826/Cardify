@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -230,7 +229,13 @@
                             <constraint firstItem="oj4-mZ-o3f" firstAttribute="leading" secondItem="dil-Q3-ib2" secondAttribute="leading" id="uFY-as-CNV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d07-RN-ozy"/>
+                    <navigationItem key="navigationItem" id="d07-RN-ozy">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="oCY-xc-WA7">
+                            <connections>
+                                <action selector="addStudySet:" destination="y0g-q5-AQG" id="vBG-Ns-kaX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="oj4-mZ-o3f" id="1Wy-Hu-UEN"/>
                         <segue destination="QDA-z8-ExI" kind="show" identifier="goToFlashCard" id="1ri-wh-pok"/>
@@ -558,49 +563,12 @@
         <!--Test View Controller-->
         <scene sceneID="dpU-gl-du4">
             <objects>
-                <viewController id="UWg-Ck-YCZ" customClass="TestViewController" sceneMemberID="viewController">
+                <viewController id="UWg-Ck-YCZ" customClass="TestViewController" customModule="Cardify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J4U-ig-TLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Got-Vk-hy6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="644"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9wL-oF-oME">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hbv-If-NRj">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tkf-15-YGH">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-MF-07L">
-                                <rect key="frame" x="40" y="762" width="334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KP3-C7-AC8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Got-Vk-hy6" firstAttribute="top" secondItem="KP3-C7-AC8" secondAttribute="top" id="8ih-aU-c88"/>
-                            <constraint firstItem="KP3-C7-AC8" firstAttribute="trailing" secondItem="Got-Vk-hy6" secondAttribute="trailing" id="Mkr-1u-vzw"/>
-                            <constraint firstItem="KP3-C7-AC8" firstAttribute="trailing" secondItem="mLc-MF-07L" secondAttribute="trailing" constant="40" id="UeZ-fR-7t0"/>
-                            <constraint firstItem="mLc-MF-07L" firstAttribute="top" secondItem="Got-Vk-hy6" secondAttribute="bottom" constant="30" id="W82-X3-RFL"/>
-                            <constraint firstItem="mLc-MF-07L" firstAttribute="leading" secondItem="KP3-C7-AC8" secondAttribute="leading" constant="40" id="ZxH-Y0-lkz"/>
-                            <constraint firstItem="KP3-C7-AC8" firstAttribute="bottom" secondItem="mLc-MF-07L" secondAttribute="bottom" constant="30" id="s9R-wY-6ns"/>
-                            <constraint firstItem="Got-Vk-hy6" firstAttribute="leading" secondItem="KP3-C7-AC8" secondAttribute="leading" id="xIZ-XZ-HRj"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4sE-Qk-XbL"/>
                 </viewController>
