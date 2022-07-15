@@ -5,6 +5,7 @@
 //  Created by user218033 on 6/22/22.
 //
 // ScrollView and PageControl from https://www.youtube.com/watch?v=EKAVB_56RIU
+// Flip animation from https://www.youtube.com/watch?v=4kSLbuB-MlU
 
 import UIKit
 
@@ -26,6 +27,7 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         scrollView.delegate = self
         pageControl.addTarget(self, action: #selector(pageControlDidChange(_:)), for: .valueChanged)
         view.addSubview(pageControl)

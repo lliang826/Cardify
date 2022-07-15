@@ -10,6 +10,6 @@ import RealmSwift
 
 class StudySetObject: Object {
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var title: String
+    @Persisted var title: String = ""
     @Persisted var content = List<String>()
 }

@@ -11,11 +11,13 @@ import Combine
 
 final class StudySetModel: ObservableObject {
     
+    static let shared = StudySetModel()
+    
     @Published var studySets: [StudySet] = []
     
     private var token: NotificationToken?
     
-    init() {
+    private init() {
         setupObserver()
     }
     
@@ -81,15 +83,13 @@ final class StudySetModel: ObservableObject {
         }
     }
     
-    func updateContent(id: String, content: [String]) {
+    func updateContent(id: String, content: String) {
         do {
             let realm = try Realm()
             let objectId = try ObjectId(string: id)
             let studySet = realm.object(ofType: StudySetObject.self, forPrimaryKey: objectId)
             try realm.write {
-                let list = List<String>()
-                list.append(objectsIn: content)
-                studySet?.content = list
+                studySet?.content.append(content)
             }
         } catch let error {
             print(String(describing: error))

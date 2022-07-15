@@ -12,6 +12,8 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    var initializeModel  = StudySetModel.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

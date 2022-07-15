@@ -11,17 +11,43 @@ class FlashCardViewController: UIViewController {
     
 //    let data = DataProvider.makeData()
     var studySet: StudySet?
+    var model: StudySetModel? = StudySetModel.shared
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func testFlashCard(_ sender: Any) {
-        print("test button clicked")
-        
         performSegue(withIdentifier: "goToTest", sender: self)
     }
     
     @IBAction func addPairToSet(_ sender: Any) {
         print("plus button clicked")
+        let dialogueMessage = UIAlertController(title: "Add New Flashcard", message: nil, preferredStyle: .alert)
+        
+        dialogueMessage.addTextField { (textField) in
+            textField.placeholder = "Term"
+        }
+        
+        dialogueMessage.addTextField { (textField) in
+            textField.placeholder = "Definition"
+        }
+        
+        let create = UIAlertAction(title: "Create", style: .default) { (_) in
+            if let termField = dialogueMessage.textFields?[0], let term = termField.text, let definitionField = dialogueMessage.textFields?[1], let definition = definitionField.text {
+                let pair = term + "@" + definition
+                print("pair: " + pair)
+                self.model?.updateContent(id: self.studySet!.id, content: pair)
+                print(self.model?.studySets)
+                self.tableView.reloadData()
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            self.tableView.reloadData()
+        }
+        
+        dialogueMessage.addAction(cancel)
+        dialogueMessage.addAction(create)
+        self.present(dialogueMessage, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -64,6 +90,7 @@ extension FlashCardViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToTest" {
             let destinationVC = segue.destination as? TestViewController
+            self.studySet?.content.shuffle()
             if let studySet = self.studySet {
                 destinationVC?.studySet = studySet
             }

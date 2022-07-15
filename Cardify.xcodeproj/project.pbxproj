@@ -19,6 +19,7 @@
 		10526D6A287CCDC8003B6912 /* StudySetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10526D69287CCDC8003B6912 /* StudySetModel.swift */; };
 		108AA9842862C3250077944C /* FlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AA9832862C3250077944C /* FlashCardViewController.swift */; };
 		108AA9882862CC400077944C /* FlashCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AA9872862CC400077944C /* FlashCardCell.swift */; };
+		1090F97A2880AA2800170FA9 /* DictionaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1090F9792880AA2800170FA9 /* DictionaryScreen.swift */; };
 		10BBC36B285FD2D000B74E6B /* StudySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36A285FD2D000B74E6B /* StudySet.swift */; };
 		10BBC36D285FD46300B74E6B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36C285FD46300B74E6B /* DataProvider.swift */; };
 		10BBC370285FE2EE00B74E6B /* StudySetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */; };
@@ -51,6 +52,7 @@
 		10526D69287CCDC8003B6912 /* StudySetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetModel.swift; sourceTree = "<group>"; };
 		108AA9832862C3250077944C /* FlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardViewController.swift; sourceTree = "<group>"; };
 		108AA9872862CC400077944C /* FlashCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardCell.swift; sourceTree = "<group>"; };
+		1090F9792880AA2800170FA9 /* DictionaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryScreen.swift; sourceTree = "<group>"; };
 		10BBC36A285FD2D000B74E6B /* StudySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySet.swift; sourceTree = "<group>"; };
 		10BBC36C285FD46300B74E6B /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetCell.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				102C3E28286036D70049215B /* ProfileViewController.swift */,
 				108AA9832862C3250077944C /* FlashCardViewController.swift */,
 				10C6FA212863E6D900E11126 /* TestViewController.swift */,
+				1090F9792880AA2800170FA9 /* DictionaryScreen.swift */,
 			);
 			path = Cardify;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1032D83E2877A4C500186946 /* DefinitionModel.swift in Sources */,
+				1090F97A2880AA2800170FA9 /* DictionaryScreen.swift in Sources */,
 				10BBC370285FE2EE00B74E6B /* StudySetCell.swift in Sources */,
 				10E07C7F2856CA9200DACDF5 /* LoginViewController.swift in Sources */,
 				10EE3363287BBA29004BC0CF /* StudySetObject.swift in Sources */,

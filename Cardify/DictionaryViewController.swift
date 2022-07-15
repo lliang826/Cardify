@@ -7,9 +7,11 @@
 
 import UIKit
 import Alamofire
+import SwiftUI
 
 class DictionaryViewController: UIViewController {
     
+    @IBOutlet weak var theContainer: UIView!
     var data: DataRequest?
     
     override func viewDidLoad() {
@@ -17,24 +19,9 @@ class DictionaryViewController: UIViewController {
         
         self.navigationItem.title = "Lookup definitions"
         
-        let networkingAF = NetworkingLayerAF()
-        networkingAF.getAllDefinitions(word: "hello")
-        print("HERE IS THE DATA: ")
-        print(networkingAF.items)
-        print("done")
+        let childView = UIHostingController(rootView: DictionaryScreen())
+        addChild(childView)
+        childView.view.frame = theContainer.bounds
+        theContainer.addSubview(childView.view)
     }
 }
-
-//extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//}
