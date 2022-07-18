@@ -22,7 +22,6 @@ struct DictionaryScreen: View {
                 .padding(.leading, 20)
                 .padding(.trailing, 40)
                 .cornerRadius(15)
-            Spacer()
             Button(action: { lookupDefinition(word: self.word) }, label: {
                 Text("Search")
                     .fontWeight(.heavy)
@@ -33,22 +32,25 @@ struct DictionaryScreen: View {
                 
             })
                 .padding(.leading, 150)
-            Spacer()
             List{
                 ForEach(items, id: \.self) { item in
                     ForEach(item.meanings, id: \.self) { meaning in
                         ForEach(meaning.definitions, id: \.self) { definition in
                             Text(definition.definition)
+                                .padding(.trailing, 20)
                             if let example = definition.example {
                                 Text(example)
                                     .italic()
                                     .foregroundColor(Color(0x5D1049))
                                     .padding(.leading, 20)
+                                    .padding(.trailing, 20)
                             }
                         }
                     }
                 }
             }
+            .listStyle(PlainListStyle())
+            .padding(.top, 20)
         }
             .onAppear {
                 

@@ -12,7 +12,19 @@ import UIKit
 //    var content: [(question: String, answer: String)] = []
 //}
 
-struct StudySet {
+class StudySet: Hashable, ObservableObject {
+    static func == (lhs: StudySet, rhs: StudySet) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.title == rhs.title
+            && lhs.content == rhs.content
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(title)
+        hasher.combine(content)
+    }
+    
     var id: String
     var title: String
     var content: [String] = []

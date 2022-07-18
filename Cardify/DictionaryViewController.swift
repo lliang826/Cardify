@@ -12,7 +12,6 @@ import SwiftUI
 class DictionaryViewController: UIViewController {
     
     @IBOutlet weak var theContainer: UIView!
-    var data: DataRequest?
     
     override func viewDidLoad() {
         super.viewDidLoad()

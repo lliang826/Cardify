@@ -40,6 +40,15 @@ final class StudySetModel: ObservableObject {
         }
     }
     
+    func findStudySet(id: String) -> StudySet? {
+        for s in studySets {
+            if s.id == id {
+                return s
+            }
+        }
+        return nil
+    }
+    
     func addStudySet(title: String, content: [String]) {
         let studySetObject = StudySetObject(value: [
             "title": title,
@@ -63,6 +72,24 @@ final class StudySetModel: ObservableObject {
             if let studySet = realm.object(ofType: StudySetObject.self, forPrimaryKey: objectId) {
                 try realm.write {
                     realm.delete(studySet)
+                }
+            }
+        } catch let error {
+            print(String(describing: error))
+        }
+    }
+    
+    func removeContent(id: String, content: String) {
+        do {
+            let realm = try Realm()
+            let objectId = try ObjectId(string: id)
+            if let studySet = realm.object(ofType: StudySetObject.self, forPrimaryKey: objectId) {
+                try realm.write {
+                    for i in 0..<studySet.content.count {
+                        if studySet.content[i] == content {
+                            studySet.content.remove(at: i)
+                        }
+                    }
                 }
             }
         } catch let error {

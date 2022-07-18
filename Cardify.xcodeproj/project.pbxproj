@@ -7,24 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		101EA174287A35480017E303 /* DefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101EA173287A35480017E303 /* DefinitionCell.swift */; };
 		102C3E25286036C40049215B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C3E24286036C40049215B /* HomeViewController.swift */; };
 		102C3E27286036CF0049215B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C3E26286036CF0049215B /* DictionaryViewController.swift */; };
 		102C3E29286036D70049215B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C3E28286036D70049215B /* ProfileViewController.swift */; };
 		102FE30C285EF1940019244E /* ComponentKit in Frameworks */ = {isa = PBXBuildFile; productRef = 102FE30B285EF1940019244E /* ComponentKit */; };
 		102FE315285EF53C0019244E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102FE314285EF53C0019244E /* Utils.swift */; };
 		1032D8362877A1CA00186946 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1032D8352877A1CA00186946 /* Alamofire */; };
-		1032D8392877A20D00186946 /* NetworkingLayerAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032D8382877A20D00186946 /* NetworkingLayerAF.swift */; };
 		1032D83E2877A4C500186946 /* DefinitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032D83D2877A4C500186946 /* DefinitionModel.swift */; };
 		10526D6A287CCDC8003B6912 /* StudySetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10526D69287CCDC8003B6912 /* StudySetModel.swift */; };
+		107445CA288390B100171C81 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107445C9288390B100171C81 /* HomeScreen.swift */; };
 		108AA9842862C3250077944C /* FlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AA9832862C3250077944C /* FlashCardViewController.swift */; };
 		108AA9882862CC400077944C /* FlashCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AA9872862CC400077944C /* FlashCardCell.swift */; };
 		1090F97A2880AA2800170FA9 /* DictionaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1090F9792880AA2800170FA9 /* DictionaryScreen.swift */; };
 		10BBC36B285FD2D000B74E6B /* StudySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36A285FD2D000B74E6B /* StudySet.swift */; };
-		10BBC36D285FD46300B74E6B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36C285FD46300B74E6B /* DataProvider.swift */; };
 		10BBC370285FE2EE00B74E6B /* StudySetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */; };
 		10C6FA222863E6D900E11126 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6FA212863E6D900E11126 /* TestViewController.swift */; };
-		10C6FA242863EB6200E11126 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6FA232863EB6200E11126 /* TestCell.swift */; };
+		10D671592885276200E67509 /* FlashCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D671582885276200E67509 /* FlashCardScreen.swift */; };
 		10E07C7F2856CA9200DACDF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E07C7E2856CA9200DACDF5 /* LoginViewController.swift */; };
 		10E07C812856CB1B00DACDF5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E07C802856CB1B00DACDF5 /* SignupViewController.swift */; };
 		10E3BB642853E5250077C228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3BB632853E5250077C228 /* AppDelegate.swift */; };
@@ -42,22 +40,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		101EA173287A35480017E303 /* DefinitionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionCell.swift; sourceTree = "<group>"; };
 		102C3E24286036C40049215B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		102C3E26286036CF0049215B /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		102C3E28286036D70049215B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		102FE314285EF53C0019244E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		1032D8382877A20D00186946 /* NetworkingLayerAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayerAF.swift; sourceTree = "<group>"; };
 		1032D83D2877A4C500186946 /* DefinitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionModel.swift; sourceTree = "<group>"; };
 		10526D69287CCDC8003B6912 /* StudySetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetModel.swift; sourceTree = "<group>"; };
+		107445C9288390B100171C81 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		108AA9832862C3250077944C /* FlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardViewController.swift; sourceTree = "<group>"; };
 		108AA9872862CC400077944C /* FlashCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardCell.swift; sourceTree = "<group>"; };
 		1090F9792880AA2800170FA9 /* DictionaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryScreen.swift; sourceTree = "<group>"; };
 		10BBC36A285FD2D000B74E6B /* StudySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySet.swift; sourceTree = "<group>"; };
-		10BBC36C285FD46300B74E6B /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetCell.swift; sourceTree = "<group>"; };
 		10C6FA212863E6D900E11126 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		10C6FA232863EB6200E11126 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		10D671582885276200E67509 /* FlashCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardScreen.swift; sourceTree = "<group>"; };
 		10E07C7E2856CA9200DACDF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		10E07C802856CB1B00DACDF5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		10E3BB602853E5250077C228 /* Cardify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,15 +93,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		1032D8372877A1F900186946 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				1032D83C2877A4B400186946 /* Models */,
-				1032D8382877A20D00186946 /* NetworkingLayerAF.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		1032D83C2877A4B400186946 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +102,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		107445C82883902F00171C81 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				1090F9792880AA2800170FA9 /* DictionaryScreen.swift */,
+				107445C9288390B100171C81 /* HomeScreen.swift */,
+				10D671582885276200E67509 /* FlashCardScreen.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		10BBC369285FD2B500B74E6B /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				10BBC36A285FD2D000B74E6B /* StudySet.swift */,
-				10BBC36C285FD46300B74E6B /* DataProvider.swift */,
 				10EE3362287BBA29004BC0CF /* StudySetObject.swift */,
 			);
 			path = Data;
@@ -130,8 +126,6 @@
 			children = (
 				10BBC36F285FE2EE00B74E6B /* StudySetCell.swift */,
 				108AA9872862CC400077944C /* FlashCardCell.swift */,
-				10C6FA232863EB6200E11126 /* TestCell.swift */,
-				101EA173287A35480017E303 /* DefinitionCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -155,7 +149,8 @@
 		10E3BB622853E5250077C228 /* Cardify */ = {
 			isa = PBXGroup;
 			children = (
-				1032D8372877A1F900186946 /* Networking */,
+				107445C82883902F00171C81 /* SwiftUI */,
+				1032D83C2877A4B400186946 /* Models */,
 				10BBC36E285FE2CC00B74E6B /* Cell */,
 				10BBC369285FD2B500B74E6B /* Data */,
 				102FE313285EF5320019244E /* Utils */,
@@ -174,7 +169,6 @@
 				102C3E28286036D70049215B /* ProfileViewController.swift */,
 				108AA9832862C3250077944C /* FlashCardViewController.swift */,
 				10C6FA212863E6D900E11126 /* TestViewController.swift */,
-				1090F9792880AA2800170FA9 /* DictionaryScreen.swift */,
 			);
 			path = Cardify;
 			sourceTree = "<group>";
@@ -278,23 +272,21 @@
 				1090F97A2880AA2800170FA9 /* DictionaryScreen.swift in Sources */,
 				10BBC370285FE2EE00B74E6B /* StudySetCell.swift in Sources */,
 				10E07C7F2856CA9200DACDF5 /* LoginViewController.swift in Sources */,
+				107445CA288390B100171C81 /* HomeScreen.swift in Sources */,
 				10EE3363287BBA29004BC0CF /* StudySetObject.swift in Sources */,
 				10526D6A287CCDC8003B6912 /* StudySetModel.swift in Sources */,
 				10E3BB682853E5250077C228 /* WelcomeViewController.swift in Sources */,
 				102C3E27286036CF0049215B /* DictionaryViewController.swift in Sources */,
 				108AA9882862CC400077944C /* FlashCardCell.swift in Sources */,
 				10BBC36B285FD2D000B74E6B /* StudySet.swift in Sources */,
-				10BBC36D285FD46300B74E6B /* DataProvider.swift in Sources */,
 				102C3E29286036D70049215B /* ProfileViewController.swift in Sources */,
 				102C3E25286036C40049215B /* HomeViewController.swift in Sources */,
-				10C6FA242863EB6200E11126 /* TestCell.swift in Sources */,
 				108AA9842862C3250077944C /* FlashCardViewController.swift in Sources */,
 				10C6FA222863E6D900E11126 /* TestViewController.swift in Sources */,
 				10E07C812856CB1B00DACDF5 /* SignupViewController.swift in Sources */,
+				10D671592885276200E67509 /* FlashCardScreen.swift in Sources */,
 				102FE315285EF53C0019244E /* Utils.swift in Sources */,
-				1032D8392877A20D00186946 /* NetworkingLayerAF.swift in Sources */,
 				10E3BB642853E5250077C228 /* AppDelegate.swift in Sources */,
-				101EA174287A35480017E303 /* DefinitionCell.swift in Sources */,
 				10E3BB662853E5250077C228 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
