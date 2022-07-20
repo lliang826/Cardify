@@ -15,12 +15,13 @@ class TestViewController: UIViewController {
     var scrollViewIndex = 0
     var isFacingFront = true
     var pages: [UIButton] = []
+    var model: StudySetModel? = StudySetModel.shared
     
     private let scrollView = UIScrollView()
     
     private lazy var pageControl: UIPageControl = {
        let pageControl = UIPageControl()
-        pageControl.numberOfPages = (self.studySet?.content.count)!
+        pageControl.numberOfPages = (model?.findStudySet(id: studySet!.id)?.content.count)!
         pageControl.backgroundColor = .systemBlue
         return pageControl
     }()
@@ -51,7 +52,8 @@ class TestViewController: UIViewController {
     }
     
     private func configureScrollView() {
-        scrollView.contentSize = CGSize(width: view.frame.size.width*CGFloat((studySet?.content.count)!), height: scrollView.frame.size.height)
+        let selectedStudySet = model?.findStudySet(id: studySet!.id)
+        scrollView.contentSize = CGSize(width: view.frame.size.width*CGFloat((selectedStudySet?.content.count)!), height: scrollView.frame.size.height)
         scrollView.isPagingEnabled = true
 
         let colors: [UIColor] = [
@@ -62,9 +64,9 @@ class TestViewController: UIViewController {
             .systemPurple
         ]
 
-        for x in 0..<(studySet?.content.count)! {
+        for x in 0..<(selectedStudySet?.content.count)! {
             
-            let content = studySet?.content[x]
+            let content = selectedStudySet?.content[x]
             let contentArray = content?.components(separatedBy: "@")
             let question: String = contentArray![0]
             
@@ -83,8 +85,7 @@ class TestViewController: UIViewController {
     }
     
     @objc func flipCard(sender: UIButton!) {
-        
-        let content = studySet?.content[scrollViewIndex]
+        let content = model?.findStudySet(id: studySet!.id)!.content[scrollViewIndex]
         let contentArray = content?.components(separatedBy: "@")
         let question: String = contentArray![0]
         let answer: String = contentArray![1]

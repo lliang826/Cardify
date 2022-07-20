@@ -56,7 +56,7 @@
                                             <color key="baseBackgroundColor" red="0.36470588235294116" green="0.062745098039215685" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Qoi-Mv-iZU" kind="show" id="t8g-KM-p6T"/>
+                                            <segue destination="Qoi-Mv-iZU" kind="show" id="on7-YY-hZY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJo-yq-k8Q">
@@ -67,7 +67,7 @@
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="L6T-HV-8ch" kind="show" id="2YK-Oz-ChB"/>
+                                            <segue destination="L6T-HV-8ch" kind="show" id="ure-8a-SCe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -124,9 +124,6 @@
                                     <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="lNa-XD-rPz" kind="show" id="qCr-dD-p1Q"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="F8Y-QY-35A">
                                 <rect key="frame" x="20" y="498" width="374" height="142"/>
@@ -164,7 +161,7 @@
                                             <color key="baseForegroundColor" red="0.36470588240000001" green="0.062745098040000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Qoi-Mv-iZU" kind="show" id="xxB-OQ-rZh"/>
+                                            <segue destination="Qoi-Mv-iZU" kind="show" id="Db4-9L-sgI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -190,7 +187,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="4vO-a1-iAV"/>
                     <connections>
+                        <outlet property="email" destination="eLx-sy-gJ4" id="5Gb-xT-d19"/>
+                        <outlet property="name" destination="ljf-MU-MQi" id="cF3-JY-Ape"/>
+                        <outlet property="password" destination="Mdj-xG-WyH" id="B6x-St-Y68"/>
                         <outlet property="signupButton" destination="CtW-nN-NYL" id="nPh-ML-ocC"/>
+                        <segue destination="lNa-XD-rPz" kind="show" identifier="signupToHome" id="50N-GC-T2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lka-lu-PDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,13 +207,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGb-c2-1Pz">
-                                <rect key="frame" x="20" y="101" width="374" height="699"/>
+                                <rect key="frame" x="20" y="101" width="374" height="536"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksD-Pb-Wki">
+                                <rect key="frame" x="40" y="702" width="334" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <connections>
+                                    <action selector="logout:" destination="y0g-q5-AQG" eventType="touchUpInside" id="5UO-dN-SXQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dil-Q3-ib2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ksD-Pb-Wki" firstAttribute="leading" secondItem="dil-Q3-ib2" secondAttribute="leading" constant="40" id="8K3-cX-C7C"/>
+                            <constraint firstItem="dil-Q3-ib2" firstAttribute="bottom" secondItem="ksD-Pb-Wki" secondAttribute="bottom" constant="80" id="f2B-sf-zv5"/>
+                            <constraint firstItem="dil-Q3-ib2" firstAttribute="trailing" secondItem="ksD-Pb-Wki" secondAttribute="trailing" constant="40" id="xlx-pF-y9A"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d07-RN-ozy">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="oCY-xc-WA7">
@@ -224,9 +238,11 @@
                     <connections>
                         <outlet property="container" destination="vGb-c2-1Pz" id="l5C-fq-n5H"/>
                         <segue destination="QDA-z8-ExI" kind="show" identifier="goToFlashCard" id="1ri-wh-pok"/>
+                        <segue destination="KhH-2J-B0v" kind="unwind" identifier="logout" unwindAction="prepareForUnwindWithSegue:" id="8Ur-DK-INr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIp-mi-Htj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KhH-2J-B0v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3957.971014492754" y="1384.8214285714284"/>
         </scene>
@@ -286,7 +302,7 @@
                                             <color key="baseForegroundColor" red="0.36470588240000001" green="0.062745098040000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="L6T-HV-8ch" kind="show" id="DBQ-6x-qmH"/>
+                                            <segue destination="L6T-HV-8ch" kind="show" id="o5e-6g-ouq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -314,6 +330,7 @@
                         <outlet property="emailTextField" destination="JQu-jm-hTY" id="xWM-IK-78S"/>
                         <outlet property="loginButton" destination="ElX-pY-FdY" id="qIq-9p-P15"/>
                         <outlet property="passwordTextField" destination="CM9-6a-QD9" id="oB0-v8-n8x"/>
+                        <segue destination="lNa-XD-rPz" kind="show" identifier="loginToHome" id="j7Z-Fd-vLb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHL-tO-YzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,6 +342,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y9j-Ng-HXO" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Qed-3B-qjQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZw-3n-jM5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -353,7 +371,6 @@
                     <connections>
                         <segue destination="8WN-Mj-nXb" kind="relationship" relationship="viewControllers" id="gCf-2u-JEl"/>
                         <segue destination="1BK-KW-4IG" kind="relationship" relationship="viewControllers" id="TC2-cS-aqI"/>
-                        <segue destination="Rlo-f0-kno" kind="relationship" relationship="viewControllers" id="3BZ-Zs-SDX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDl-0G-ehn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -395,10 +412,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal" translatesAutoresizingMaskIntoConstraints="NO" id="Bfv-zI-qNd">
-                                <rect key="frame" x="30" y="148" width="354" height="156"/>
+                                <rect key="frame" x="30" y="104" width="354" height="156"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0JJ-hf-kAh">
-                                <rect key="frame" x="30" y="354" width="354" height="298"/>
+                                <rect key="frame" x="30" y="310" width="354" height="391"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUG-0w-rge">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
@@ -435,14 +452,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="********" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJ9-bs-v36">
-                                        <rect key="frame" x="0.0" y="179.5" width="354" height="118.5"/>
+                                        <rect key="frame" x="0.0" y="179.5" width="354" height="211.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfw-ZU-Ew6">
-                                <rect key="frame" x="50" y="702" width="314" height="31"/>
+                                <rect key="frame" x="50" y="751" width="314" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="yMf-OZ-dpx"/>
                                 </constraints>
@@ -554,8 +571,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="t8g-KM-p6T"/>
-        <segue reference="2YK-Oz-ChB"/>
+        <segue reference="j7Z-Fd-vLb"/>
+        <segue reference="on7-YY-hZY"/>
+        <segue reference="ure-8a-SCe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.36470588240000001" green="0.062745098040000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

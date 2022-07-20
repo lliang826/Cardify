@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Combine
+import FirebaseAuth
 
 class EventMessenger: ObservableObject {
     @Published var studySet: StudySet?
@@ -22,6 +23,17 @@ class HomeViewController: UIViewController {
     private var subs: [AnyCancellable] = []
 
     @IBOutlet weak var container: UIView!
+    
+    @IBAction func logout(_ sender: Any) {
+        if FirebaseAuth.Auth.auth().currentUser != nil {
+            do {
+                try FirebaseAuth.Auth.auth().signOut()
+                self.performSegue(withIdentifier: "logout", sender: self)
+            } catch {
+                print("Couldn't log out")
+            }
+        }
+    }
     
     @IBAction func addStudySet(_ sender: Any) {
         let dialogueMessage = UIAlertController(title: "Add New Study Set", message: nil, preferredStyle: .alert)

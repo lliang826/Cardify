@@ -16,7 +16,8 @@ struct FlashCardScreen: View {
     
     var body: some View {
         List{
-            ForEach(studySetModel.findStudySet(id: studySet.id)!.content, id: \.self) { content in
+            ForEach(
+                studySetModel.findStudySet(id: studySet.id)!.content, id: \.self) { content in
                 let pair = content.components(separatedBy: "@")
                 VStack {
                     Text("Front")

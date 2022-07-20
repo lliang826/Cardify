@@ -14,9 +14,13 @@ class WelcomeViewController: UIViewController {
     
     var initializeModel  = StudySetModel.shared
     
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         loginButton.layer.shadowColor = UIColor.gray.cgColor
         loginButton.layer.shadowOpacity = 1.0
         loginButton.layer.shadowOffset = CGSize(width: 10, height: 10)

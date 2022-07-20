@@ -65,6 +65,15 @@ class FlashCardViewController: UIViewController {
 
     }
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        if self.isMovingFromParent {
+//            navigationController?.popViewController(animated: true)
+//            dismiss(animated: true, completion: nil)
+//        }
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToTest" {
             let destinationVC = segue.destination as? TestViewController
