@@ -1,4 +1,6 @@
-# COMP3912_Project
+# Cardify
+
+iOS Project for COMP 3912
 
 Cardify is an iOS flashcard app with a built-in dictionary.
 
