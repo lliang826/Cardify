@@ -1,6 +1,6 @@
 # Cardify
 
-Cardify is an iOS flashcard app with a built-in dictionary. Built with both Storyboard/UIKit and SwiftUI, Alamofire (HTTP networking library), Realm (database for local persistent storage), and Firebase for authentication.
+Cardify is an iOS flashcard app with a built-in dictionary. Built with Alamofire (HTTP networking library), Realm (database for local persistent storage), and Firebase (for authentication), and used both Storyboard/UIKit and SwiftUI.
 
 
 Dictionary API from [Free Dictionary API](https://dictionaryapi.dev/)
