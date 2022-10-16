@@ -4,6 +4,8 @@ Cardify is an iOS flashcard app with a built-in dictionary. Built with Alamofire
 
 
 Dictionary API from [Free Dictionary API](https://dictionaryapi.dev/)
+Flip animation from https://www.youtube.com/watch?v=4kSLbuB-MlU
+Flashcard slider from https://www.youtube.com/watch?v=EKAVB_56RIU
 
 
 https://user-images.githubusercontent.com/23683321/180888626-1dc98e52-2c57-476c-9cf3-d2039ef46fa7.mov
